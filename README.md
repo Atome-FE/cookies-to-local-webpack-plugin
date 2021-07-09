@@ -14,7 +14,8 @@ module.exports = {
       new cookiesToLocal({
         targetUrl: 'https://www.google.com',
         localPort: 8020,
-        ars: ['--auto-open-devtools-for-tabs']
+        ars: ['--auto-open-devtools-for-tabs'],
+        enable: process.env.NODE_ENV === 'development'
       })
     ),
   ),
